@@ -150,24 +150,24 @@ int main(void)
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
 FOR PULSE AT 3750
-
+~~~
 TON = 2.5 * 1 = 2.5ms
 TOFF= 0.5 * 1.8 = 0.9ms
 TOTAL TIME = 2.5+0.9 = 3.4
 % DUTY=TON/TOTAL TIME*100%
     =(2.5/3.4)*100 = 73.5%
-
+~~~
 FOR PULSE AT 900
-
+~~~
 TON = 5 * 0.5 = 2.5ms
 TOFF= 0.5 * 1.5 = 0.75ms
 TOTAL TIME = 2.5+0.75 = 3.25
 % DUTY=TON/TOTAL TIME*100%
     =(2.5/3.25)*100 = 77.0%
-
+~~~
 
 FOR PULSE AT 500
-
+~~~
 
 TON = 2ms
 TOFF = 2ms
@@ -175,7 +175,7 @@ TOTAL TIME = 4ms
 FREQUENCY = 1/(TOTAL TIME)
 FREQUENCY = 1/(4)
 FREQUENCY = 250 Hz
-
+~~~
 
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated 
