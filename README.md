@@ -96,39 +96,85 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
+~~~
+Developed By: Ragul M
+Reg No: 212221230080
+~~~
+~~~
+#include "main.h"
 
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_TIM2_Init(void);
+
+int main(void)
+{
+ 
+  MX_TIM2_Init();
+
+  HAL_TIM_Base_Start(&htim2);
+  HAL_TIM_PWM_Init(&htim2);
+  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+
+  while (1)
+
+}
+
+
+
+~~~
 
 
 
 
 ## Output screen shots of proteus  :
+
+![img2](https://github.com/ragulmani936/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94881918/2ef1837b-1165-45f2-b77b-2e2475f8d075)
+
+
+### FOR PULSE AT 3750:
+
+![img1](https://github.com/ragulmani936/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94881918/d5960c2d-90e9-4083-90f7-59aac5b8a797)
+
+### FOR PULSE AT 900:
+![img2](https://github.com/ragulmani936/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94881918/6dfa399f-8705-4de1-8bb1-862bccb3924d)
+
+### FOR PULSE AT 500:
+![img3](https://github.com/ragulmani936/EXPERIMENT--07-SQUARE-WAVE-GENERATION-AT-THE-OUTPUT-PIN-USING-TIMER/assets/94881918/995a595a-85a2-4a93-8344-ab2e54cca21d)
+
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
-FOR PULSE AT 500
+FOR PULSE AT 3750
 
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
-FOR PULSE AT 700
-
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
+TON = 2.5 * 1 = 2.5ms
+TOFF= 0.5 * 1.8 = 0.9ms
+TOTAL TIME = 2.5+0.9 = 3.4
+% DUTY=TON/TOTAL TIME*100%
+    =(2.5/3.4)*100 = 73.5%
 
 FOR PULSE AT 900
 
-TON = 
-TOFF=
-TOTAL TIME = 
+TON = 5 * 0.5 = 2.5ms
+TOFF= 0.5 * 1.5 = 0.75ms
+TOTAL TIME = 2.5+0.75 = 3.25
+% DUTY=TON/TOTAL TIME*100%
+    =(2.5/3.25)*100 = 77.0%
+
+
+FOR PULSE AT 500
+
+
+TON = 2ms
+TOFF = 2ms
+TOTAL TIME = 4ms
 FREQUENCY = 1/(TOTAL TIME)
+FREQUENCY = 1/(4)
+FREQUENCY = 250 Hz
 
 
 ## Result :
